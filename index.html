@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mimsy the Moonjelly | Baby's First Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="fx" aria-hidden="true"></div>
+
+<header class="hero">
+  <h1>Mimsy</h1>
+  <p class="sub">the Moonjelly &middot; apprentice glow-witch</p>
+  <div class="stage">
+    <svg id="ghost" viewBox="0 0 300 300" role="img" aria-label="Mimsy, a glowing jelly-ghost baby wearing a see-through crystal witch hat. Her eyes follow your cursor.">
+      <defs>
+        <linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4eeff"/><stop offset=".55" stop-color="#cdb8ff"/><stop offset="1" stop-color="#ffd6b8"/></linearGradient>
+        <linearGradient id="gh" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity=".85"/><stop offset="1" stop-color="#9c86f0" stop-opacity=".7"/></linearGradient>
+      </defs>
+      <circle cx="254" cy="236" r="24" fill="url(#gb)" stroke="#fff" stroke-opacity=".7" stroke-width="3"/>
+      <path d="M58 252C38 168 68 108 150 108s112 60 92 144c-30 22-154 22-184 0z" fill="url(#gb)" stroke="#fff" stroke-opacity=".8" stroke-width="3"/>
+      <ellipse cx="62" cy="188" rx="20" ry="30" fill="url(#gb)" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(18 62 188)"/>
+      <ellipse cx="238" cy="188" rx="20" ry="30" fill="url(#gb)" stroke="#fff" stroke-opacity=".7" stroke-width="3" transform="rotate(-18 238 188)"/>
+      <circle cx="108" cy="178" r="13" fill="#ff8fd0" opacity=".45"/><circle cx="192" cy="178" r="13" fill="#ff8fd0" opacity=".45"/>
+      <g id="eyes"><ellipse cx="116" cy="160" rx="8" ry="11" fill="#3b2377"/><ellipse cx="184" cy="160" rx="8" ry="11" fill="#3b2377"/>
+        <circle cx="113" cy="155" r="3" fill="#fff"/><circle cx="181" cy="155" r="3" fill="#fff"/>
+        <path d="M138 180q6 7 12 0q6 7 12 0" fill="none" stroke="#3b2377" stroke-width="4" stroke-linecap="round"/></g>
+      <g id="hat">
+        <path d="M70 112C84 66 118 34 158 16c26-10 50 6 40 26-12 2-20 10-20 20 22 18 38 30 50 50z" fill="url(#gh)" stroke="#fff" stroke-width="3"/>
+        <ellipse cx="150" cy="116" rx="102" ry="22" fill="url(#gh)" stroke="#fff" stroke-width="3" transform="rotate(-5 150 116)"/>
+        <path d="M100 100c20-26 46-44 70-56" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      <text class="spk" x="24" y="70" font-size="26">&#10024;</text><text class="spk" x="256" y="96" font-size="22" style="animation-delay:-.7s">&#11088;</text><text class="spk" x="270" y="170" font-size="18" style="animation-delay:-1.3s">&#10024;</text>
+    </svg>
+    <p class="say" id="say">hi!! i'm mimsy. boop.</p>
+  </div>
+  <button class="btn big c1" id="go" type="button">SEE MY STUFF &#10024;</button><br>
+  <div class="counter" id="ctr" role="group"><span>Visitors (you):</span><span class="dg" id="dg" aria-hidden="true"></span></div>
+  <noscript><p>Mimsy needs JavaScript to play. She'll wait.</p></noscript>
+</header>
+
+<main class="desk">
+  <section class="win" id="win-about" tabindex="-1" aria-labelledby="t-about" data-t="about.txt" style="--t:-.7deg">
+    <div class="tbar" style="background:var(--sun)"><h2 id="t-about">about-me.txt</h2><div class="wb"><button class="mn" type="button" aria-label="Shrink about-me.txt" aria-expanded="true">&minus;</button><button class="x" type="button" aria-label="Close about-me.txt">X</button></div></div>
+    <div class="body"><dl>
+      <div><dt>What I am</dt><dd>A moonjelly: a jelly-ghost baby, born from a sneeze of midnight mist.</dd></div>
+      <div><dt>What I look like</dt><dd>Squishy, glowy and see-through, in lilac, pink and peach. I wear a crystal witch hat that never comes off.</dd></div>
+      <div><dt>My personality</dt><dd>Shy, curious and always a little sleepy. I get brave when someone needs a light.</dd></div>
+      <div><dt>My quirks</dt><dd>I glow brighter when I'm happy. I hiccup sparkles. My eyes follow whatever is interesting (try your cursor!).</dd></div>
+      <div><dt>My voice</dt><dd>Tiny "boop"s and long sleepy "mmmm"s.</dd></div>
+    </dl></div>
+  </section>
+
+  <section class="win" id="win-story" tabindex="-1" aria-labelledby="t-story" data-t="story.doc" style="--t:.6deg">
+    <div class="tbar" style="background:var(--pink)"><h2 id="t-story">my-story.doc</h2><div class="wb"><button class="mn" type="button" aria-label="Shrink my-story.doc" aria-expanded="true">&minus;</button><button class="x" type="button" aria-label="Close my-story.doc">X</button></div></div>
+    <div class="body">
+      <div class="track" role="img" aria-label="Story progress"><i id="prog"></i></div>
+      <article class="scene"><span class="em" aria-hidden="true">&#9729;&#65039;</span><h3>1. A cloud who forgot to rain</h3><p>One midnight, a tiny cloud of moon-mist sneezed over a puddle. It meant to make rain. Instead, out wobbled a giggle, and the giggle had arms. That was me!</p></article>
+      <article class="scene"><span class="em" aria-hidden="true">&#129497;</span><h3>2. The hat that fit</h3><p>A tired old witch dropped her crystal hat from her broom. It landed on my head, glowed pink, and refused to leave. Neither did I.</p></article>
+      <article class="scene"><span class="em" aria-hidden="true">&#129754;</span><h3>3. Glow lessons</h3><p>The hat taught me to catch little lights: a firefly's blink, a puddle's shine, a yawn. I keep them in jars, and I never lose one.</p></article>
+      <article class="scene"><span class="em" aria-hidden="true">&#127769;</span><h3>4. Now</h3><p>Now I work the night shift, lighting lanterns for sleepy creatures. Come and look at my work. Boop.</p></article>
+    </div>
+  </section>
+
+  <section class="win w" id="win-proj" tabindex="-1" aria-labelledby="t-proj" data-t="projects.exe" style="--t:-.3deg">
+    <div class="tbar" style="background:var(--mint)"><h2 id="t-proj">my-projects.exe</h2><div class="wb"><button class="mn" type="button" aria-label="Shrink my-projects.exe" aria-expanded="true">&minus;</button><button class="x" type="button" aria-label="Close my-projects.exe">X</button></div></div>
+    <div class="body">
+      <div class="proj"><h3>1. The Glow Jar Collection</h3><p>Five jars of caught light. Tap each one to switch it on.</p>
+        <div class="row" id="jars"></div><p class="hint" id="jmsg" role="status" aria-live="polite"></p></div>
+      <div class="proj"><h3>2. Bubble Brew</h3><p>My potion is bubbling over! Pop the bubbles before they float away.</p>
+        <div id="pond" aria-label="Bubble pond"></div>
+        <div class="row"><button class="btn c2" id="bstart" type="button">Start brewing</button><button class="btn c5" id="bpop" type="button">Pop one for me</button><span class="score" role="status" aria-live="polite">Popped: <b id="bscore">0</b></span></div></div>
+      <div class="proj"><h3>3. The Moon Chimes</h3><p>A tiny five-note chime I built from sound itself. Tap the pads and make a lullaby.</p>
+        <div class="row" id="pads"></div></div>
+    </div>
+  </section>
+
+  <section class="win w" id="win-wall" tabindex="-1" aria-labelledby="t-wall" data-t="wall.exe" style="--t:.4deg">
+    <div class="tbar" style="background:var(--lilac)"><h2 id="t-wall">hello-wall.exe</h2><div class="wb"><button class="mn" type="button" aria-label="Shrink hello-wall.exe" aria-expanded="true">&minus;</button><button class="x" type="button" aria-label="Close hello-wall.exe">X</button></div></div>
+    <div class="body">
+      <form id="gf" novalidate style="max-width:620px">
+        <p><label for="gn">Your name (optional)</label><input type="text" id="gn" maxlength="24" autocomplete="off"></p>
+        <p><label for="gm">Sign my wall</label><textarea id="gm" maxlength="140" aria-describedby="ge"></textarea></p>
+        <p class="err" id="ge" role="alert"></p>
+        <button class="btn big c1" type="submit">STICK IT! &#128204;</button>
+        <p class="hint" id="gs" role="status" aria-live="polite">Notes are saved on this device only.</p>
+      </form>
+      <ul class="wall" id="wall" aria-label="Notes on the wall"></ul>
+    </div>
+  </section>
+
+  <section class="win w" id="win-secret" tabindex="-1" aria-labelledby="t-sec" data-t="secret.txt" hidden style="--t:-1deg">
+    <div class="tbar" style="background:var(--sun)"><h2 id="t-sec">secret.txt</h2><div class="wb"><button class="mn" type="button" aria-label="Shrink secret.txt" aria-expanded="true">&minus;</button><button class="x" type="button" aria-label="Close secret.txt">X</button></div></div>
+    <div class="body"><p><b>You found my hiding spot!</b> Here is my real secret: I'm a little scared of the dark. That's why I glow. Now you know, and you're my friend. &#128156;</p></div>
+  </section>
+</main>
+
+<footer><p>Made with moon-mist and glue. (psst: my hat likes being tapped three times.)</p></footer>
+
+<nav class="tb" aria-label="Taskbar">
+  <button class="btn c2" data-open="about" type="button">&#128196; me</button>
+  <button class="btn c1" data-open="story" type="button">&#128214; story</button>
+  <button class="btn c3" data-open="proj" type="button">&#129514; stuff</button>
+  <button class="btn c4" data-open="wall" type="button">&#128204; wall</button>
+  <span class="sp"></span>
+  <button class="btn c5" id="mute" type="button" aria-pressed="false">&#128266; sound on</button>
+  <button class="btn c5" id="theme" type="button">&#127769; night</button>
+  <span class="clock" id="clock"></span>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
