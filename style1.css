@@ -1,0 +1,69 @@
+:root {
+  --sky: #cfe6e1;
+  --ink: #24413a;
+  --slime: #f0a24f;
+  --panel: #fff8ec;
+  --muted: #5f7a72;
+}
+* { box-sizing: border-box; }
+:root {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--sky);
+  color: var(--ink);
+  font-family: 'Fredoka', system-ui, sans-serif;
+  padding: 16px;
+}
+.game { width: 100%; max-width: 720px; }
+.hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+  padding: 0 4px;
+}
+.hud h1 { margin: 0; font-size: 1.4rem; font-weight: 700; }
+.scores { display: flex; gap: 20px; font-weight: 500; color: var(--muted); }
+.scores b { color: var(--ink); font-size: 1.5rem; font-weight: 700; margin-left: 4px; }
+.stage {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 3px solid var(--ink);
+  background: #e9f4f1;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+canvas { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; }
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 6px;
+  background: rgba(36, 65, 58, 0.55);
+  color: var(--panel);
+  padding: 16px;
+}
+.overlay.hidden { display: none; }
+.overlay h2 { margin: 0; font-size: clamp(1.4rem, 5vw, 2.1rem); }
+.overlay p { margin: 0; font-size: clamp(0.95rem, 3vw, 1.15rem); }
+.hint { margin: 10px 4px 0; color: var(--muted); font-size: 0.95rem; }
+kbd {
+  background: var(--panel);
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  padding: 0 6px;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--ink);
+}

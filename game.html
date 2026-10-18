@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Slime Jump</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style1.css">
+</head>
+<body>
+  <main class="game">
+    <div class="hud">
+      <h1>Slime Jump</h1>
+      <div class="scores" aria-live="polite">
+        <span>Jumps <b id="score">0</b></span>
+        <span>Best <b id="best">0</b></span>
+      </div>
+    </div>
+
+    <div class="stage" id="stage">
+      <canvas id="canvas" aria-label="Slime jump game"></canvas>
+      <div class="overlay" id="overlay">
+        <h2 id="ovTitle">Slime ko kudao</h2>
+        <p id="ovText">Space dabao ya screen tap karo</p>
+      </div>
+    </div>
+    <p class="hint">Jump: <kbd>Space</kbd> <kbd>↑</kbd> <kbd>W</kbd> ya tap. Har jump par +1 score. Patthar se bacho!</p>
+  </main>
+
+<script src="script.js"></script>
+</body>
+</html>
